@@ -78,7 +78,7 @@
         android:layout_height="96dp"
         android:layout_marginBottom="16dp"
         android:background="@color/purple_500"
-        android:src="@drawable/paper"
+        android:src="@drawable/scissors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

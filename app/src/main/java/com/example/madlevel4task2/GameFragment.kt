@@ -7,9 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.example.madlevel4task2.model.Move
+import com.example.madlevel4task2.model.Result
+import com.example.madlevel4task2.model.Winner
+import kotlinx.android.synthetic.main.fragment_game.*
 import kotlinx.android.synthetic.main.fragment_game.view.*
+import java.util.*
 
 class GameFragment : Fragment() {
+
+    private lateinit var currentGameResult: Result
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -25,10 +32,72 @@ class GameFragment : Fragment() {
         initViews()
 
         // Test
-        findNavController().navigate(R.id.action_GameFragment_to_HistoryFragment)
+        // findNavController().navigate(R.id.action_GameFragment_to_HistoryFragment)
     }
 
     private fun initViews() {
+        input_rock.setOnClickListener {
+            play(Move.ROCK)
+        }
+        input_paper.setOnClickListener {
+            play(Move.PAPER)
+        }
+        input_scissors.setOnClickListener {
+            play(Move.SCISSORS)
+        }
+    }
 
+    private fun play(playerMove: Move) {
+        var currentComputerMove = computerMove()
+        var currentWinner = checkGame(playerMove, currentComputerMove)
+
+        // Sets the current result
+        currentGameResult = Result(
+            date = Calendar.getInstance().time,
+            playerMove = playerMove,
+            computerMove = currentComputerMove,
+            winner = currentWinner
+        )
+    }
+
+    private fun computerMove(): Move {
+        var randomMove =(1..3).random()
+
+        when (randomMove) {
+            1 -> {
+                return Move.ROCK
+            }
+            2 -> {
+                return Move.PAPER
+            }
+            3 -> {
+                return Move.SCISSORS
+            }
+            else -> return Move.ROCK
+        }
+    }
+
+    private fun checkGame(playerMove: Move, computerMove: Move): Winner {
+        if (playerMove == Move.ROCK && computerMove == Move.ROCK) {
+            return Winner.DRAW
+        } else if (playerMove == Move.ROCK && computerMove == Move.PAPER) {
+            return Winner.COMPUTER
+        } else if (playerMove == Move.ROCK && computerMove == Move.SCISSORS) {
+            return Winner.PLAYER
+        } else if (playerMove == Move.PAPER && computerMove == Move.ROCK) {
+            return Winner.PLAYER
+        } else if (playerMove == Move.PAPER && computerMove == Move.PAPER) {
+            return Winner.DRAW
+        } else if (playerMove == Move.PAPER && computerMove == Move.SCISSORS) {
+            return Winner.COMPUTER
+        } else if (playerMove == Move.SCISSORS && computerMove == Move.ROCK) {
+            return Winner.COMPUTER
+        } else if (playerMove == Move.SCISSORS && computerMove == Move.PAPER) {
+            return Winner.PLAYER
+        } else if (playerMove == Move.SCISSORS && computerMove == Move.SCISSORS) {
+            return Winner.DRAW
+        } else {
+            return Winner.DRAW
+        }
     }
 }
