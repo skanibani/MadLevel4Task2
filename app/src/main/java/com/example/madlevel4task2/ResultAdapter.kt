@@ -16,6 +16,7 @@ class ResultAdapter(private val results: List<Result>): RecyclerView.Adapter<Res
             itemView.item_tv_date.text = result.date.toString()
 
             // Viewholder needs context to access Resources
+            // TODO move this to enum itself
             when (result.winner) {
                 Winner.COMPUTER -> {
                     itemView.item_tv_game_winner.text = "Computer wins!"
@@ -35,14 +36,16 @@ class ResultAdapter(private val results: List<Result>): RecyclerView.Adapter<Res
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_result, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.databind(results[position])
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return results.size
     }
 }
