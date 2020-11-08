@@ -11,13 +11,13 @@ data class Result(
     var date: Date,
 
     @ColumnInfo(name = "playerMove")
-    var playerMove: String,
+    var playerMove: Move,
 
     @ColumnInfo(name = "computerMove")
-    var computerMove: String,
+    var computerMove: Move,
 
     @ColumnInfo(name = "winner")
-    var winner: String,
+    var winner: Winner,
 
     // Empty id column auto-increment as primary key
     @PrimaryKey(autoGenerate = true)
