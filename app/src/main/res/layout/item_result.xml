@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_tv_game_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/make_move"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dev_date"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/item_tv_game_winner"
+        app:layout_constraintStart_toStartOf="@+id/item_tv_game_winner"
+        app:layout_constraintTop_toBottomOf="@+id/item_tv_game_winner" />
+
+    <ImageView
+        android:id="@+id/item_move_computer"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rock"
+        app:layout_constraintEnd_toStartOf="@+id/item_tv_VS"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_tv_date" />
+
+    <TextView
+        android:id="@+id/item_tv_VS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/vs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/item_move_computer"
+        app:layout_constraintEnd_toStartOf="@+id/item_move_player"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_move_computer"
+        app:layout_constraintTop_toTopOf="@+id/item_move_computer" />
+
+    <ImageView
+        android:id="@+id/item_move_player"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="@+id/item_tv_VS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_tv_VS"
+        app:layout_constraintTop_toTopOf="@+id/item_tv_VS" />
+
+    <TextView
+        android:id="@+id/item_tv_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/computer"
+        app:layout_constraintEnd_toEndOf="@+id/item_move_computer"
+        app:layout_constraintStart_toStartOf="@+id/item_move_computer"
+        app:layout_constraintTop_toBottomOf="@+id/item_move_computer" />
+
+    <TextView
+        android:id="@+id/item_tv_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/player"
+        app:layout_constraintEnd_toEndOf="@+id/item_move_player"
+        app:layout_constraintStart_toStartOf="@+id/item_move_player"
+        app:layout_constraintTop_toBottomOf="@+id/item_move_player" />
+</androidx.constraintlayout.widget.ConstraintLayout>

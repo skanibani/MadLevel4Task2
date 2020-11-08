@@ -25,4 +25,6 @@
     <string name="computer">Computer</string>
     <string name="player">Player</string>
     <string name="make_move">Make a move</string>
+
+    <string name="dev_date">datum hier</string>
 </resources>
