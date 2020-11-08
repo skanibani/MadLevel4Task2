@@ -49,4 +49,6 @@ class HistoryFragment : Fragment() {
         rvHistory.adapter = resultAdapter
         rvHistory.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
     }
+
+
 }
