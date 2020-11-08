@@ -8,7 +8,7 @@ import java.util.*
 @Entity(tableName = "resultTable")
 data class Result(
     @ColumnInfo(name = "date")
-    var date: Date,
+    var date: Date?,
 
     @ColumnInfo(name = "playerMove")
     var playerMove: String,
