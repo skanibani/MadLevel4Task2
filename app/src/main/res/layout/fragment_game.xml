@@ -51,7 +51,6 @@
         android:id="@+id/input_rock"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:background="@color/purple_500"
         android:src="@drawable/rock"
@@ -85,4 +84,74 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/input_paper"
         app:srcCompat="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/tv_game_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="@string/make_move"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statistics_header" />
+
+    <ImageView
+        android:id="@+id/move_computer"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/rock"
+        app:layout_constraintEnd_toStartOf="@+id/tv_VS"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_game_winner" />
+
+    <TextView
+        android:id="@+id/tv_VS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="serif"
+        android:text="@string/vs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/move_computer"
+        app:layout_constraintEnd_toStartOf="@+id/move_player"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/move_computer"
+        app:layout_constraintTop_toTopOf="@+id/move_computer" />
+
+    <ImageView
+        android:id="@+id/move_player"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_VS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_VS"
+        app:layout_constraintTop_toTopOf="@+id/tv_VS" />
+
+    <TextView
+        android:id="@+id/tv_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/computer"
+        app:layout_constraintEnd_toEndOf="@+id/move_computer"
+        app:layout_constraintStart_toStartOf="@+id/move_computer"
+        app:layout_constraintTop_toBottomOf="@+id/move_computer" />
+
+    <TextView
+        android:id="@+id/tv_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/player"
+        app:layout_constraintEnd_toEndOf="@+id/move_player"
+        app:layout_constraintStart_toStartOf="@+id/move_player"
+        app:layout_constraintTop_toBottomOf="@+id/move_player" />
 </androidx.constraintlayout.widget.ConstraintLayout>

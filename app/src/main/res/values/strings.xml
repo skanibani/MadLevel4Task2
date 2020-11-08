@@ -23,6 +23,6 @@
 
     <string name="you">You</string>
     <string name="computer">Computer</string>
-
+    <string name="player">Player</string>
     <string name="make_move">Make a move</string>
 </resources>
