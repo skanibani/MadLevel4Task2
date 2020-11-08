@@ -9,4 +9,20 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Game Fragment -->
+    <string name="tv_welcome">Welcome</string>
+    <string name="tv_instructions">Instructions: select rock, paper or scissors to play.</string>
+    <string name="tv_statistics_header">Your all time statistics</string>
+
+    <string name="player_win">You win!</string>
+    <string name="computer_win">Computer wins!</string>
+    <string name="draw">Draw</string>
+
+    <string name="vs">V.S.</string>
+
+    <string name="you">You</string>
+    <string name="computer">Computer</string>
+
+    <string name="make_move">Make a move</string>
 </resources>
