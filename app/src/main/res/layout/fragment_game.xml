@@ -37,16 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_instructions" />
 
-    <TextView
-        android:id="@+id/tv_statistics_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_statistics_header"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
-
     <ImageView
         android:id="@+id/input_rock"
         android:layout_width="96dp"
@@ -95,7 +85,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_statistics_header" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <ImageView
         android:id="@+id/move_computer"
@@ -154,4 +144,15 @@
         app:layout_constraintEnd_toEndOf="@+id/move_player"
         app:layout_constraintStart_toStartOf="@+id/move_player"
         app:layout_constraintTop_toBottomOf="@+id/move_player" />
+
+    <Button
+        android:id="@+id/bt_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/history"
+        app:layout_constraintBottom_toTopOf="@+id/input_paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

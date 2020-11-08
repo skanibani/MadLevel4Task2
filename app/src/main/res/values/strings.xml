@@ -27,4 +27,6 @@
     <string name="make_move">Make a move</string>
 
     <string name="dev_date">datum hier</string>
+
+    <string name="history">View history</string>
 </resources>
