@@ -47,6 +47,12 @@ class GameFragment : Fragment() {
         }
     }
 
+    private fun updateViews() {
+        tv_game_winner.text = getString(currentGameResult.winner.getText())
+        move_computer.setImageResource(currentGameResult.computerMove.getImage())
+        move_player.setImageResource(currentGameResult.playerMove.getImage())
+    }
+
     private fun play(playerMove: Move) {
         var currentComputerMove = computerMove()
         var currentWinner = checkGame(playerMove, currentComputerMove)
@@ -58,6 +64,8 @@ class GameFragment : Fragment() {
             computerMove = currentComputerMove,
             winner = currentWinner
         )
+
+        updateViews()
     }
 
     private fun computerMove(): Move {
